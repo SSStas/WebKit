@@ -10,31 +10,45 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    struct Metadata: Codable {
-            let metadata: String
+    struct Petitions : Codable {
+        let metadata: Metadata
+        let results: [Result]
     }
-
     
-    var petitions : [[String : String]] = []
+    struct Metadata: Codable {
+        let responseInfo: ResponseInfo
+    }
+    
+    struct ResponseInfo: Codable {
+        let status: Int
+    }
+    
+    struct Result: Codable {
+        let title:String
+        let body: String
+    }
+    
+    var petitions : [Result] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "https://api.whitehouse.gov/v1/petitions.json?limit=1")!
+        let url = URL(string: "https://api.whitehouse.gov/v1/petitions.json?limit=100")!
         
         if let json = try? String(contentsOf: url) {
-        
-            let data = json.data(using: .utf8)!
-            
+            let inputData = json.data(using: .utf8)!
             let decoder = JSONDecoder()
-            let metadata = try! decoder.decode(Metadata.self, from: data)
+            if let petitionList = try? decoder.decode(Petitions.self, from: inputData) {
+                if 200...299 ~= petitionList.metadata.responseInfo.status{
+                    petitions = petitionList.results
+                }
+            }
             
-            print(metadata)
         }
         
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,8 +60,8 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Заголовок"
-        cell.detailTextLabel?.text = "Подзаголовоҝ"
+        cell.textLabel?.text = "\(indexPath.row + 1). \(petitions[indexPath.row].title)"
+        cell.detailTextLabel?.text = petitions[indexPath.row].body
         return cell
     }
 
