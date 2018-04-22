@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FA5D2EE208C7FB800BB9266 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA5D2ED208C7FB800BB9266 /* DetailViewController.swift */; };
 		3FF06DA6207A041600CDA140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF06DA5207A041600CDA140 /* AppDelegate.swift */; };
 		3FF06DA8207A041600CDA140 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF06DA7207A041600CDA140 /* ViewController.swift */; };
 		3FF06DAB207A041600CDA140 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF06DA9207A041600CDA140 /* Main.storyboard */; };
@@ -15,7 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3FF06DA2207A041600CDA140 /* WebKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FA5D2ED208C7FB800BB9266 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3FF06DA2207A041600CDA140 /* MyWebKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWebKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF06DA5207A041600CDA140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF06DA7207A041600CDA140 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3FF06DAA207A041600CDA140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,7 +48,7 @@
 		3FF06DA3207A041600CDA140 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3FF06DA2207A041600CDA140 /* WebKit.app */,
+				3FF06DA2207A041600CDA140 /* MyWebKit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +58,7 @@
 			children = (
 				3FF06DA5207A041600CDA140 /* AppDelegate.swift */,
 				3FF06DA7207A041600CDA140 /* ViewController.swift */,
+				3FA5D2ED208C7FB800BB9266 /* DetailViewController.swift */,
 				3FF06DA9207A041600CDA140 /* Main.storyboard */,
 				3FF06DAC207A041900CDA140 /* Assets.xcassets */,
 				3FF06DAE207A041900CDA140 /* LaunchScreen.storyboard */,
@@ -67,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3FF06DA1207A041600CDA140 /* WebKit */ = {
+		3FF06DA1207A041600CDA140 /* MyWebKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FF06DB4207A041900CDA140 /* Build configuration list for PBXNativeTarget "WebKit" */;
+			buildConfigurationList = 3FF06DB4207A041900CDA140 /* Build configuration list for PBXNativeTarget "MyWebKit" */;
 			buildPhases = (
 				3FF06D9E207A041600CDA140 /* Sources */,
 				3FF06D9F207A041600CDA140 /* Frameworks */,
@@ -79,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = WebKit;
+			name = MyWebKit;
 			productName = WebKit;
-			productReference = 3FF06DA2207A041600CDA140 /* WebKit.app */;
+			productReference = 3FF06DA2207A041600CDA140 /* MyWebKit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3FF06D9D207A041600CDA140 /* Build configuration list for PBXProject "WebKit" */;
+			buildConfigurationList = 3FF06D9D207A041600CDA140 /* Build configuration list for PBXProject "MyWebKit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3FF06DA1207A041600CDA140 /* WebKit */,
+				3FF06DA1207A041600CDA140 /* MyWebKit */,
 			);
 		};
 /* End PBXProject section */
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA5D2EE208C7FB800BB9266 /* DetailViewController.swift in Sources */,
 				3FF06DA8207A041600CDA140 /* ViewController.swift in Sources */,
 				3FF06DA6207A041600CDA140 /* AppDelegate.swift in Sources */,
 			);
@@ -287,7 +291,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.learnSwift.WebKit;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.learnSwift.MyWebKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,7 +309,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.learnSwift.WebKit;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.learnSwift.MyWebKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,7 +319,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3FF06D9D207A041600CDA140 /* Build configuration list for PBXProject "WebKit" */ = {
+		3FF06D9D207A041600CDA140 /* Build configuration list for PBXProject "MyWebKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FF06DB2207A041900CDA140 /* Debug */,
@@ -324,7 +328,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3FF06DB4207A041900CDA140 /* Build configuration list for PBXNativeTarget "WebKit" */ = {
+		3FF06DB4207A041900CDA140 /* Build configuration list for PBXNativeTarget "MyWebKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FF06DB5207A041900CDA140 /* Debug */,

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:WebKit.xcodeproj">
+      location = "self:/Users/student/Desktop/WebKitLesson/WebKit/MyWebKit.xcodeproj">
    </FileRef>
 </Workspace>
